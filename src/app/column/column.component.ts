@@ -2,14 +2,14 @@ import { Component, Input } from '@angular/core';
 import { Task } from '../models/task.model';
 import { TaskComponent } from '../task/task.component';
 import { CommonModule } from '@angular/common';
-import { CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
+import { CdkDropList } from '@angular/cdk/drag-drop';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-column',
   standalone: true,
-  imports: [CommonModule, TaskComponent, CdkDropList, CdkDrag, MatCardModule, MatIconModule],
+  imports: [CommonModule, TaskComponent, CdkDropList, MatCardModule, MatIconModule],
   template: `
     <div class="column" cdkDropList [cdkDropListData]="tasks">
       <mat-card class="column-card">

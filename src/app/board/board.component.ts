@@ -5,12 +5,11 @@ import { v4 as uuidv4 } from 'uuid';
 import { CdkDropListGroup } from '@angular/cdk/drag-drop';
 import { AddTaskComponent } from '../add-task/add-task.component';
 import { CommonModule } from '@angular/common';
-import {CdkDrag} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-board',
   standalone: true,
-  imports: [CommonModule, ColumnComponent, CdkDropListGroup, AddTaskComponent, CdkDrag ],
+  imports: [CommonModule, ColumnComponent, CdkDropListGroup, AddTaskComponent ],
   template: `
     <div class="board" cdkDropListGroup >
       <app-column 
@@ -52,7 +51,7 @@ import {CdkDrag} from '@angular/cdk/drag-drop';
 })
 export class BoardComponent {
   tasks: Task[] = [
-   
+
   ];
 
   get todoTasks() {

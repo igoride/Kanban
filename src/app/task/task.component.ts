@@ -32,6 +32,7 @@ import { MatIconModule } from '@angular/material/icon';
       transition: transform 0.2s ease;
     }
     .task-card {
+      cursor: pointer;
       border-left: 4px solid;
       padding: 12px;
       border-radius: 8px !important;
