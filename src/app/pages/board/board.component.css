@@ -1,0 +1,13 @@
+.board {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    height: calc(100% - 32px);
+    width: calc(100% - 32px);
+    box-sizing: border-box;
+}
+
+app-column {
+    flex: 1;
+    min-width: 0; /* Prevents flex items from overflowing */
+}

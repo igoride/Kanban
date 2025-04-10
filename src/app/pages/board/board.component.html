@@ -1,0 +1,21 @@
+<div class="board" cdkDropListGroup>
+  <app-column
+    title="To Do"
+    status="todo"
+    [tasks]="todoTasks">
+  </app-column>
+
+  <app-column
+    title="In Progress"
+    status="in-progress"
+    [tasks]="inProgressTasks">
+  </app-column>
+
+  <app-column
+    title="Done"
+    status="done"
+    [tasks]="doneTasks">
+  </app-column>
+</div>
+
+<app-add-task (addTask)="addTask($event)"></app-add-task>

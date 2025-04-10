@@ -1,0 +1,73 @@
+.column {
+    flex: 1;
+    min-width: 280px;
+    margin: 0 8px;
+    height: 100%;
+}
+
+.column-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fafafa !important;
+    border-radius: 12px !important;
+}
+
+.column-title {
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    color: #424242;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-height: 1.3;
+}
+
+.column-count {
+    color: #757575 !important;
+    font-size: 0.8rem !important;
+    white-space: nowrap;
+}
+
+.column-content {
+    flex: 1;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.task-container {
+    padding: 12px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.empty-state {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #9E9E9E;
+    text-align: center;
+}
+
+.empty-state mat-icon {
+    flex-shrink: 0;
+}
+
+.empty-state p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.drag-handle {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    overflow: visible !important;
+    margin-right: 8px;
+    flex-shrink: 0;
+}

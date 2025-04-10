@@ -1,0 +1,17 @@
+<div class="column" cdkDropList [cdkDropListData]="tasks">
+  <mat-card class="column-card">
+    <mat-card-header>
+      <mat-card-title class="column-title">{{ title }}</mat-card-title>
+      <mat-card-subtitle class="column-count">{{ tasks.length }} tasks</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="column-content">
+      <div class="task-container">
+        <app-task *ngFor="let task of tasks" [task]="task"></app-task>
+        <div *ngIf="!tasks.length" class="empty-state">
+          <mat-icon>inbox</mat-icon>
+          <p>No tasks here yet</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
