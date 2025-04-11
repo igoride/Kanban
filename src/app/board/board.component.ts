@@ -31,6 +31,11 @@ export class BoardComponent {
     return this.tasks.filter(task => task.status === 'done');
   }
 
+  onTaskDropped(event: { task: Task, newStatus: 'todo' | 'in-progress' | 'done' }) {
+    const task = event.task;
+    task.status = event.newStatus;  // Update task's status to new column status
+  }
+
   addTask(newTask: Omit<Task, 'id' | 'status'>) {
     this.tasks.push({
       ...newTask,
