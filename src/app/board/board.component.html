@@ -1,1 +1,25 @@
-<p>board works!</p>
+<div class="board" cdkDropListGroup >
+    <app-column 
+      title="To Do" 
+      status="todo" 
+      [tasks]="todoTasks"
+      (taskDropped)="onTaskDropped($event)">
+    </app-column>
+
+    <app-column 
+      title="In Progress" 
+      status="in-progress" 
+      [tasks]="inProgressTasks"
+      (taskDropped)="onTaskDropped($event)">
+    </app-column>
+
+    <app-column 
+      title="Done" 
+      status="done" 
+      [tasks]="doneTasks"
+      (taskDropped)="onTaskDropped($event)">
+    </app-column>
+  </div>
+
+  <app-add-task (addTask)="addTask($event)"></app-add-task>
+
