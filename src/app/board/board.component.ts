@@ -11,44 +11,8 @@ import {CdkDrag} from '@angular/cdk/drag-drop';
   selector: 'app-board',
   standalone: true,
   imports: [CommonModule, ColumnComponent, CdkDropListGroup, AddTaskComponent, CdkDrag ],
-  template: `
-    <div class="board" cdkDropListGroup >
-      <app-column 
-        title="To Do" 
-        status="todo" 
-        [tasks]="todoTasks">
-      </app-column>
-
-      <app-column 
-        title="In Progress" 
-        status="in-progress" 
-        [tasks]="inProgressTasks">
-      </app-column>
-
-      <app-column 
-        title="Done" 
-        status="done" 
-        [tasks]="doneTasks">
-      </app-column>
-    </div>
-
-    <app-add-task (addTask)="addTask($event)"></app-add-task>
-  `,
-  styles: [`
-    .board {
-      display: flex;
-      gap: 16px;
-      padding: 16px;
-      height: calc(100% - 32px);
-      width: calc(100% - 32px);
-      box-sizing: border-box;
-    }
-    
-    app-column {
-      flex: 1;
-      min-width: 0; /* Prevents flex items from overflowing */
-    }
-  `]
+  templateUrl: './board.component.html',
+  styleUrls: ['./board.component.css']
 })
 export class BoardComponent {
   tasks: Task[] = [
