@@ -1,1 +1,15 @@
-<p>column works!</p>
+<div cdkDrag [cdkDragData]="task">
+    <mat-card class="task-card">
+      <div class="task-header" >
+        <mat-icon class="drag-handle"> </mat-icon>
+        <h3>{{ task.title }}</h3>
+      </div>
+      <p class="task-description" title="{{ task.description }}">
+        {{ task.description || 'No description' }}
+      </p>
+      <div class="task-footer">
+        <span class="status-badge {{task.status}}">{{ task.status }}</span>
+        <mat-icon class="task-icon">more_vert</mat-icon>
+      </div>
+    </mat-card>
+  <div cdkDrag>
