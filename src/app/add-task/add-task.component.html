@@ -1,1 +1,13 @@
-<p>add-task works!</p>
+<div class="add-task-form">
+    <mat-form-field>
+      <mat-label>Task Title</mat-label>
+      <input matInput [(ngModel)]="title" placeholder="Enter task title">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea matInput [(ngModel)]="description" placeholder="Enter task description"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="onSubmit()">Add Task</button>
+  </div>
